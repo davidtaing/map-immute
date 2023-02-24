@@ -1,10 +1,10 @@
-name: Run Tests
+name: Run Tests and Build
 
 on: push
 
 jobs:
-  run-tests:
-    name: Run Tests
+  run-tests-and-build:
+    name: Run Tests and Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Branch
@@ -40,3 +40,6 @@ jobs:
 
       - name: Run tests
         run: pnpm test
+
+      - name: Build
+        run: pnpm build
