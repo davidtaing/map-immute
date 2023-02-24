@@ -1,0 +1,12 @@
+name: Run Tests
+
+on:
+  push
+
+jobs:
+  run-tests:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/setup-deps.yml
+      - run: pnpm test
