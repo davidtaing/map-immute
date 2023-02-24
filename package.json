@@ -1,0 +1,15 @@
+{
+  "name": "map-immute",
+  "version": "0.1.0",
+  "description": "Immutable Maps, built on top of Vanilla JS Maps.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "David Taing <adavidtaing@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
