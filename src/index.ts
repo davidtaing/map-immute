@@ -1,7 +1,7 @@
 export class ImmutableMap<K, V> extends Map<K, V> {
   clear(): void {
     throw new Error(
-      "Cannot call the clear method from an immutable map. Please use safeDelete instead."
+      "Cannot call the clear method from an immutable map. Please use safeClear instead."
     );
   }
 
