@@ -2,7 +2,7 @@
 
 Immutable Map - built on top of Vanilla Map
 
-[![Run Tests and Build](https://github.com/davidtaing/map-immute/actions/workflows/run-tests.yml/badge.svg)](https://github.com/davidtaing/map-immute/actions/workflows/run-tests.yml)
+[![Run Tests and Build](https://github.com/davidtaing/map-immute/actions/workflows/run-tests-and-build.yml/badge.svg)](https://github.com/davidtaing/map-immute/actions/workflows/run-tests-and-build.yml) [![Publish Package to NPM](https://github.com/davidtaing/map-immute/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/davidtaing/map-immute/actions/workflows/npm-publish.yml)
 
 ## Background
 
