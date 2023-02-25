@@ -1,6 +1,6 @@
 {
   "name": "map-immute",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Immutable Maps, built on top of Vanilla JS Maps.",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
