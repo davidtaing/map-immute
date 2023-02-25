@@ -27,6 +27,15 @@ test("Set returns new map, when the Key already exists", () => {
   expect(newMap).not.toEqual(map);
 });
 
+test("Set returns original map, when the Key and Value are the same", () => {
+  const map = new ImmutableMap([["a", 1]]);
+
+  const newMap = map.set("a", 1);
+
+  expect(newMap === map).toBeTruthy();
+  expect(newMap).toStrictEqual(map);
+});
+
 test("Set does not mutate original map, when the map is empty", () => {
   const map = new ImmutableMap<string, number>();
   map.set("a", 1);

@@ -39,6 +39,10 @@ export class ImmutableMap<K, V> implements Map<K, V> {
   }
 
   set(key: K, value: V): this {
+    if (this.data.get(key) === value) {
+      return this;
+    }
+
     const mutableMap = new Map<K, V>(this);
     mutableMap.set(key, value);
 
