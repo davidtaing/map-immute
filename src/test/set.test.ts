@@ -74,10 +74,3 @@ it("Set updates value, when the key already exists", () => {
 
   expect(result.get("a")).toEqual(2);
 });
-
-it("Set updates value, when the key already exists", () => {
-  const originalMap = new ImmutableMap<string, number>([["a", 1]]);
-  const result = originalMap.set("a", 2);
-
-  expect(result.get("a")).toEqual(2);
-});
