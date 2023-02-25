@@ -15,14 +15,17 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     return "ImmutableMap";
   }
 
+  // TODO
   clear(): void {
     throw new Error("Method not implemented.");
   }
 
+  // TODO
   delete(key: K): boolean {
     throw new Error("Method not implemented.");
   }
 
+  // TODO
   forEach(
     callbackfn: (value: V, key: K, map: Map<K, V>) => void,
     thisArg?: any
@@ -55,14 +58,17 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     return new ImmutableMap<K, V>(mutableMap) as this;
   }
 
+  // TODO
   entries(): IterableIterator<[K, V]> {
     throw new Error("Method not implemented.");
   }
 
+  // TODO
   keys(): IterableIterator<K> {
     throw new Error("Method not implemented.");
   }
 
+  // TODO
   values(): IterableIterator<V> {
     throw new Error("Method not implemented.");
   }
