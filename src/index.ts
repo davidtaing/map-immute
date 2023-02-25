@@ -15,14 +15,16 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     return "ImmutableMap";
   }
 
-  // TODO
   clear(): void {
-    throw new Error("Method not implemented.");
+    throw new Error(
+      "Cannot call the clear method on an ImmutableMap. Please use safeClear instead."
+    );
   }
 
-  // TODO
   delete(key: K): boolean {
-    throw new Error("Method not implemented.");
+    throw new Error(
+      "Cannot call the delete method on an ImmutableMap. Please use safeDelete instead."
+    );
   }
 
   // TODO
