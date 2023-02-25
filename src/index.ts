@@ -35,6 +35,9 @@ export class ImmutableMap<K, V> extends Map<K, V> {
   }
 
   set(key: K, value: V): this {
-    return new Map(this).set(key, value) as this;
+    const mutableMap = new Map<K, V>(this);
+    mutableMap.set(key, value);
+
+    return mutableMap as this;
   }
 }
