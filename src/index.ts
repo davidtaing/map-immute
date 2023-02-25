@@ -17,7 +17,7 @@ export class ImmutableMap<K, V> extends Map<K, V> {
     callbackfn: (value: V, key: K, map: Map<K, V>) => void,
     thisArg?: any
   ): void {
-    const map = new Map(this);
+    const map = new Map<K, V>(this);
     map.forEach(callbackfn, thisArg);
   }
 
@@ -26,10 +26,10 @@ export class ImmutableMap<K, V> extends Map<K, V> {
   }
 
   safeDelete(key: K): ImmutableMap<K, V> | false {
-    const mutableMap = new Map(this) as ImmutableMap<K, V>;
+    const mutableMap = new Map<K, V>(this);
     const deleted = mutableMap.delete(key);
 
-    const result = new ImmutableMap(mutableMap);
+    const result = new ImmutableMap<K, V>(mutableMap);
 
     return deleted ? result : false;
   }
