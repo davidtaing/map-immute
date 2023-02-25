@@ -59,3 +59,10 @@ it("new item from set can be retrived by calling ImmutableMap.get", () => {
 
   expect(result.get("a")).toEqual(1);
 });
+
+it("Set updates value, when the key already exists", () => {
+  const originalMap = new ImmutableMap<string, number>([["a", 1]]);
+  const result = originalMap.set("a", 2);
+
+  expect(result.get("a")).toEqual(2);
+});
