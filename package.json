@@ -2,6 +2,10 @@
   "name": "map-immute",
   "version": "0.2.1",
   "description": "Immutable Maps, built on top of Vanilla JS Maps.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidtaing/map-immute.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
