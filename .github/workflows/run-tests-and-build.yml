@@ -41,5 +41,8 @@ jobs:
       - name: Run tests
         run: pnpm test
 
+      - name: Run tsc lint
+        run: pnpm lint
+
       - name: Build
         run: pnpm build
