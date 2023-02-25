@@ -34,7 +34,10 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     throw new Error("Method not implemented.");
   }
   set(key: K, value: V): this {
-    throw new Error("Method not implemented.");
+    const mutableMap = new Map<K, V>(this);
+    mutableMap.set(key, value);
+
+    return new ImmutableMap<K, V>(mutableMap) as this;
   }
   entries(): IterableIterator<[K, V]> {
     throw new Error("Method not implemented.");
