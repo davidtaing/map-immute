@@ -52,3 +52,10 @@ test("Returned ImmutableMap contains new item", () => {
 
   expect(result).toEqual(expected);
 });
+
+it("new item from set can be retrived by calling ImmutableMap.get", () => {
+  const originalMap = new ImmutableMap<string, number>();
+  const result = originalMap.set("a", 1);
+
+  expect(result.get("a")).toEqual(1);
+});
