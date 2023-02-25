@@ -35,7 +35,7 @@ export class ImmutableMap<K, V> implements Map<K, V> {
   }
 
   has(key: K): boolean {
-    return true;
+    return this.data.has(key);
   }
 
   /**
