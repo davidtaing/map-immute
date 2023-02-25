@@ -35,7 +35,7 @@ export class ImmutableMap<K, V> implements Map<K, V> {
   }
 
   has(key: K): boolean {
-    throw new Error("Method not implemented.");
+    return true;
   }
 
   /**
