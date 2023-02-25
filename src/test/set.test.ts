@@ -12,6 +12,14 @@ test("Set returns new map: non-empty map", () => {
 });
 
 test("Set returns new map: empty map", () => {
+  const map = new ImmutableMap([["a", 1]]);
+
+  const newMap = map.set("a", 2);
+
+  expect(newMap).not.toEqual(map);
+});
+
+test("Set returns new map when the Key already exists", () => {
   const map = new ImmutableMap([]);
 
   const newMap = map.set("a", 1);
@@ -58,6 +66,13 @@ it("new item from set can be retrived by calling ImmutableMap.get", () => {
   const result = originalMap.set("a", 1);
 
   expect(result.get("a")).toEqual(1);
+});
+
+it("Set updates value, when the key already exists", () => {
+  const originalMap = new ImmutableMap<string, number>([["a", 1]]);
+  const result = originalMap.set("a", 2);
+
+  expect(result.get("a")).toEqual(2);
 });
 
 it("Set updates value, when the key already exists", () => {
