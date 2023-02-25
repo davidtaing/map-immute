@@ -1,7 +1,3 @@
-/**
- * Not sure what file to put these tests in.
- */
-
 import { ImmutableMap } from "..";
 
 test("Object.fromEntries() behaves the same for both ImmutableMap and Map", () => {
