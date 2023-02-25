@@ -15,12 +15,28 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     return "ImmutableMap";
   }
 
+  /**
+   * Please use safeClear instead.
+   *
+   * @throws
+   * error when called due to the Type Definition
+   * being too restrictive for an immutable implementation.
+   *
+   */
   clear(): void {
     throw new Error(
       "Cannot call the clear method on an ImmutableMap. Please use safeClear instead."
     );
   }
 
+  /**
+   * Please use safeDelete instead.
+   *
+   * @throws
+   * error when called due to the Type Definition
+   * being too restrictive for an immutable implementation.
+   *
+   */
   delete(key: K): boolean {
     throw new Error(
       "Cannot call the delete method on an ImmutableMap. Please use safeDelete instead."
@@ -43,10 +59,17 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     return this.data.has(key);
   }
 
+  /**
+   * @returns new empty ImmutableMap
+   */
   safeClear(): ImmutableMap<K, V> {
     return new ImmutableMap<K, V>();
   }
 
+  /**
+   * @returns new ImmutableMap without specified key/value pair.
+   * Otherwise returns false as per the original boolean return time.
+   */
   safeDelete(key: K): ImmutableMap<K, V> | false {
     const mutableMap = new Map<K, V>(this);
     const deleted = mutableMap.delete(key);
