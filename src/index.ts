@@ -28,7 +28,7 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     throw new Error("Method not implemented.");
   }
   get(key: K): V | undefined {
-    throw new Error("Method not implemented.");
+    return this.data.get(key);
   }
   has(key: K): boolean {
     throw new Error("Method not implemented.");
