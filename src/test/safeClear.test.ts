@@ -1,6 +1,6 @@
 import { ImmutableMap } from "..";
 
-it("does not mutate original map", () => {
+it("false postitive: does not mutate original map", () => {
   const map = new ImmutableMap([
     ["a", 1],
     ["b", 2],
@@ -19,7 +19,7 @@ it("does not mutate original map", () => {
   );
 });
 
-it("does not mutate original map", () => {
+it("false postitive: does not mutate original map", () => {
   const map = new ImmutableMap([
     ["a", 1],
     ["b", 2],
@@ -28,6 +28,21 @@ it("does not mutate original map", () => {
 
   map.safeClear();
 
-  // actually a false positive, same as before, but still passing
+  // actually a false positive
+  // same input & setup, different assert
+  // but still passing.
+  expect(map).toEqual(new ImmutableMap([]));
+});
+
+it("failed comparison", () => {
+  const map = new ImmutableMap([
+    ["a", 1],
+    ["b", 2],
+    ["c", 3],
+  ]);
+
+  map.safeClear();
+
+  // converted to typedef string e.g. "Map {}"
   expect(map).toEqual(undefined);
 });
