@@ -36,3 +36,10 @@ test("Calling Set on non-empty ImmutableMap does not mutate original map", () =>
 
   expect(map).toEqual(expected);
 });
+
+test("Returned ImmutableMap's size prop increases by 1", () => {
+  const originalMap = new ImmutableMap<string, number>();
+  const result = originalMap.set("a", 1);
+
+  expect(result.size).toEqual(1);
+});
