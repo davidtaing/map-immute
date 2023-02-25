@@ -7,6 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "tsc",
     "test": "jest"
   },
   "author": "David Taing <adavidtaing@gmail.com>",
