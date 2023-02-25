@@ -8,6 +8,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
+    "release": "pnpm build && changeset publish",
     "test": "jest"
   },
   "author": "David Taing <adavidtaing@gmail.com>",
