@@ -21,7 +21,7 @@ test("set method inserts K/V pair to new map", () => {
   const immutableMap = new ImmutableMap<string, string>();
   const newMap = immutableMap.set("a", "1");
 
-  const expected = new Map([["a", "1"]]);
+  const expected = new ImmutableMap([["a", "1"]]);
 
   expect(newMap).toEqual(expected);
 });
