@@ -16,3 +16,12 @@ test("set method does not mutate original map", () => {
 
   expect(immutableMap).toEqual(expected);
 });
+
+test("set method inserts K/V pair to new map", () => {
+  const immutableMap = new ImmutableMap<string, string>();
+  const newMap = immutableMap.set("a", "1");
+
+  const expected = new Map([["a", "1"]]);
+
+  expect(newMap).toEqual(expected);
+});
