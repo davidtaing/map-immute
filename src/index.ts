@@ -38,6 +38,12 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     throw new Error("Method not implemented.");
   }
 
+  /**
+   * Immutable set. Returns new Map if the key/value is different.
+   * Otherwise returns the original ImmutableMap if key/value is the same.
+   * @param key
+   * @param value
+   */
   set(key: K, value: V): this {
     if (this.data.get(key) === value) {
       return this;
