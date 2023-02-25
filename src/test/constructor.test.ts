@@ -1,6 +1,6 @@
 import { ImmutableMap } from "..";
 
-test("constructor creates a new ImmutableMap", () => {
+test("empty constructor creates a new empty ImmutableMap", () => {
   const map = new ImmutableMap();
 
   expect(map).toEqual(new ImmutableMap());
