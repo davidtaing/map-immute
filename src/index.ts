@@ -26,8 +26,10 @@ export class ImmutableMap<K, V> extends Map<K, V> {
   }
 
   safeDelete(key: K): ImmutableMap<K, V> | false {
-    const result = new Map(this) as ImmutableMap<K, V>;
-    const deleted = result.delete(key);
+    const mutableMap = new Map(this) as ImmutableMap<K, V>;
+    const deleted = mutableMap.delete(key);
+
+    const result = new ImmutableMap(mutableMap);
 
     return deleted ? result : false;
   }
