@@ -101,18 +101,15 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     return new ImmutableMap<K, V>(mutableMap) as this;
   }
 
-  // TODO
   entries(): IterableIterator<[K, V]> {
-    throw new Error("Method not implemented.");
+    return this.data.entries();
   }
 
-  // TODO
   keys(): IterableIterator<K> {
-    throw new Error("Method not implemented.");
+    return this.data.keys();
   }
 
-  // TODO
   values(): IterableIterator<V> {
-    throw new Error("Method not implemented.");
+    return this.data.values();
   }
 }
