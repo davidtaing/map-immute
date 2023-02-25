@@ -43,12 +43,17 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     );
   }
 
-  // TODO
+  /**
+   * Clones the Map as a new Vanilla Map, then iterates over the map.
+   * @param callbackfn
+   * @param thisArg
+   */
   forEach(
     callbackfn: (value: V, key: K, map: Map<K, V>) => void,
     thisArg?: any
   ): void {
-    throw new Error("Method not implemented.");
+    const map = new Map<K, V>(this);
+    map.forEach(callbackfn, thisArg);
   }
 
   get(key: K): V | undefined {
