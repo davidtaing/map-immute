@@ -43,6 +43,10 @@ export class ImmutableMap<K, V> implements Map<K, V> {
     return this.data.has(key);
   }
 
+  safeClear(): ImmutableMap<K, V> {
+    return new ImmutableMap<K, V>();
+  }
+
   /**
    * Immutable set. Returns new Map if the key/value is different.
    * Otherwise returns the original ImmutableMap if key/value is the same.
