@@ -3,7 +3,8 @@
   "version": "0.2.0",
   "description": "Immutable Maps, built on top of Vanilla JS Maps.",
   "main": "dist/index.js",
-  "types": "dist/index.d.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "test": "jest"
