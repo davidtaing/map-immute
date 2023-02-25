@@ -8,6 +8,7 @@ test("Set returns new map, when the original map is not empty", () => {
 
   const newMap = map.set("c", 3);
 
+  expect(newMap === map).toBeFalsy();
   expect(newMap).not.toEqual(map);
 });
 
@@ -16,6 +17,7 @@ test("Set returns new map, when the original map is empty", () => {
 
   const newMap = map.set("a", 2);
 
+  expect(newMap === map).toBeFalsy();
   expect(newMap).not.toEqual(map);
 });
 
@@ -24,6 +26,7 @@ test("Set returns new map, when the Key already exists", () => {
 
   const newMap = map.set("a", 1);
 
+  expect(newMap === map).toBeFalsy();
   expect(newMap).not.toEqual(map);
 });
 
